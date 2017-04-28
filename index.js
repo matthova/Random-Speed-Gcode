@@ -18,7 +18,7 @@ lr.on('error', function (err) {
 lr.on('line', function (line) {
   const obj = new GcodeObject(line);
   // If we're extruding, then give it a random speed
-  if (obj.command === 'G1' && obj.args.e) {
+  if (obj.command === 'G1' && obj.args.e && (obj.args.x || obj.args.y)) {
     const speed = parseInt(Math.random() * (fMax - fMin) + fMin, 10);
     obj.args.f = speed;
     wstream.write(obj.toGcode());
