@@ -1,6 +1,6 @@
 # Random-Speed-Gcode
 
-To use, install <a href="http://nodejs.org>node</a>.
+To use, install [node](http://nodejs.org).
 
 ```
 git clone https://github.com/matthova/Random-Speed-Gcode.git
